@@ -71,6 +71,7 @@
   
   #my-scrollbar {
     overflow: auto;
+    background-color: #006fcf;
   }
 
 
@@ -180,7 +181,7 @@
     padding: 0 !important;
   }
   .intro-section, .outro-section {
-    width: min(75vw, 950px);
+    width: clamp(50vw, 70vw, 950px);
     margin: 0 auto;
     padding: 1rem 0rem 4rem;
   }
@@ -203,6 +204,7 @@
 
   .two-column {
     margin-bottom: 0rem;
+    min-height: 100vh;
   }
 
   .card-section {
@@ -314,12 +316,11 @@
   
   .column-left {
     width: 74%;
-    max-height: 1250px;
+    max-height: 100vh;
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-y: scroll;
     float: left;
-    padding-bottom: 2rem;
     background-color: #fff;
 
   }
@@ -333,7 +334,7 @@
 
   .column-right {
     width: 26%;
-    max-height: 1250px;
+    max-height: 100vh;
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -439,6 +440,12 @@
   }
   a.desktop-only {
     display: inline;
+  }
+
+  .hide {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
   }
   
 /* Portrait and Landscape iPad*/
@@ -582,7 +589,7 @@
   }
 
   .bg-lgtblue:nth-child(2) {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     padding-top: 40px;
   }
   
@@ -733,7 +740,7 @@ input:checked ~ .tab-content {
   display: block;
 
 }
-input {
+#chck1, #chck2, #chck3 {
   position: absolute;
   opacity: 0;
   z-index: -1;
@@ -807,7 +814,16 @@ input {
   font-size: 18px;
 }
 .gcdc-gate .gcdc-form-render {
-  padding: 50px 0px 0px 15px;
+  padding: 50px 15px 30px 15px;
+}
+.tab-close-label{
+  padding: 1rem 2rem;
+  background-color: #FDB92D;
+  color: #000;
+  border-radius: 100px;
+  margin: 0 auto;
+  display: block;
+  width: 145px;
 }
 }
 
@@ -829,5 +845,17 @@ input {
     position: relative;
     opacity: 1;
     z-index: 0;
+  }
+  .tab-close-label{
+    padding: 1rem 2rem;
+    background-color: #FDB92D;
+    color: #000;
+    border-radius: 100px;
+    margin: 0 auto;
+    display: block;
+    width: 145px;
+  }
+  .title-margin{
+    margin-top: 40px;
   }
 }
